@@ -4,7 +4,7 @@ if(main_index_files != 1024){
     exit;
 }
 
-$sql_conn = new mysqli("localhost", "root", "Thdbf014@@", "board_lee");
+$sql_conn = new mysqli("localhost", "Mavil27", "Thdbf014@@", "board_lee");
 $sql_conn->set_charset("utf8");
 $sql = $sql_conn->stmt_init();
 if(mysqli_connect_errno()) {

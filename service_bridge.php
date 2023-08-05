@@ -837,7 +837,7 @@ switch($_POST['service_bridge_mode']){
             }else{
                 if(trim($_POST['form_change_pw']) == trim($_POST['form_change_pw_re'])){
                     $system_v['form_check_all_logout'] = 1;
-                    $system_v['form_change_pw'] = trim($_POST['form_change_pw']);
+                    $system_v['form_change_pw'] = hash("sha256", 'sAlT?0730abnrt12er9*zxpot'.trim($_POST['form_change_pw']).'p0ad3bsdj21asdf3gdfjamxz#!');
                 }else{
                     $system_v['error_count'] += 1;
                     $system_v['error_msg'] .= "<br>변경할 비밀번호와 변경할 비밀번호 재입력란의 값이 일치하지 않습니다.";
